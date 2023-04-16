@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background: linear-gradient(90deg, #190361 0%, #BB00FF 100%);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: #34355B;
+}
+
+main {
+    background: #FFFFFF;
+    padding: 4.8rem 6.8rem 6.8rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+    text-align: center;
+    width: min(42.8rem, 90%);
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+}
+
+/* screen 1 */
+
+h1 {
+    margin-bottom: 1.4rem;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.screen1 img:hover {
+    cursor: pointer;
+    animation: shake-bottom .8s cubic-bezier(.455,.03,.515,.955) both;
+
+}
+
+/* screen 2 */
+
+
+.message {
+    margin-top: 1.7rem;
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    margin: 1.7rem auto;
+    animation:tracking-in-expand-fwd-bottom 2.5s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+.screen2 p {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+}
+
+
+
+button {
+    width: 17.4rem;
+    height: 5.2rem;
+    border: none;
+    background: #FF9500;
+    border-radius: .4rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+
+    color: #FFFFFF;
+
+}
+
+button:hover {
+    background: #f9a93a;
+    cursor: pointer;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes shake-bottom{0%,100%{transform:rotate(0deg);transform-origin:50% 100%}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-4deg)}30%,50%,70%{transform:rotate(4deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
+
+@keyframes tracking-in-expand-fwd-bottom{0%{letter-spacing:-.5em;transform:translateZ(-700px) translateY(15rem);opacity:0}40%{opacity:.2}100%{transform:translateZ(0) translateY(0);opacity:1}}
